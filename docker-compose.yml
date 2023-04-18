@@ -9,17 +9,17 @@ services:
     environment:
       # ALLOW_EMPTY_PASSWORD is recommended only for development.
       - ALLOW_EMPTY_PASSWORD=yes
-      - MARIADB_USER=bn_myapp
-      - MARIADB_DATABASE=bitnami_myapp
-  myapp:
+      - MARIADB_USER=bn_chirper
+      - MARIADB_DATABASE=bitnami_chirper
+  chirper:
     image: docker.io/bitnami/laravel:10
     ports:
       - '8000:8000'
     environment:
       - DB_HOST=mariadb
       - DB_PORT=3306
-      - DB_USERNAME=bn_myapp
-      - DB_DATABASE=bitnami_myapp
+      - DB_USERNAME=bn_chirper
+      - DB_DATABASE=bitnami_chirper
     volumes:
       - './chirper:/app'
     depends_on:
