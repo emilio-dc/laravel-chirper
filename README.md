@@ -1,3 +1,42 @@
+# laravel-chirper
+
+## Starting the project
+
+Docker is required.
+
+Run `./vendor/bin/sail up`
+
+## View the project
+
+Just enter http://localhost/ in the browser after running `./vendor/bin/sail up` and waiting until it's initialized.
+
+## Run commands
+
+Use `./vendor/bin/sail <command>` to run a command in the container.
+
+Example:
+
+View PHP version: `./vendor/bin/sail php --version`
+
+List Artisan commands: `./vendor/bin/sail artisan list`
+
+View Composer version: `./vendor/bin/sail composer --version`
+
+View Node Package Manager version: `./vendor/bin/sail npm --version`
+
+## SQL database default credentials
+
+Connecting your SQL Management Software using localhost with the default username: `sail` and password: `password`.
+
+## Source
+
+The source of the instructions for starting the project is:
+
+[Kickstart your Laravel Web App using Laravel Sail (WSL2) - Medium](https://blog.devgenius.io/kickstart-your-laravel-web-app-using-laravel-sail-30276265e588)
+
+---
+---
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
