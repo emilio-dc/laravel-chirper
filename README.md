@@ -4,7 +4,9 @@
 
 Docker is required.
 
-Run `./vendor/bin/sail up`
+Run `./vendor/bin/sail up` for starting the server.
+
+Run `./vendor/bin/sail npm run dev` for starting VITE.
 
 ## View the project
 
@@ -27,6 +29,10 @@ View Node Package Manager version: `./vendor/bin/sail npm --version`
 ## SQL database default credentials
 
 Connecting your SQL Management Software using localhost with the default username: `sail` and password: `password`.
+
+## List Routes
+
+You may view all of the routes for your application by running the `./vendor/bin/sail artisan route:list` command.
 
 ## Source
 
