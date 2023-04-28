@@ -4,7 +4,9 @@
 
 Docker is required.
 
-Run `./vendor/bin/sail up`
+Run `./vendor/bin/sail up` for starting the server.
+
+Run `./vendor/bin/sail npm run dev` for starting VITE.
 
 ## View the project
 
