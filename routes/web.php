@@ -31,8 +31,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::resource('chirps', ChirpController::class)
-    ->only(['index', 'store'])
-    ->middleware(['auth', 'verified']);
+    ->only(['index', 'store']) // The first one is GET, the second one is POST
+    ->middleware(['auth', 'verified']); // You must be logged in and your email must be verified (if enabled)
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
