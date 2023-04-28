@@ -11,6 +11,7 @@ export default function Index({ auth }) {
  
     const submit = (e) => {
         e.preventDefault();
+        // Sends the form using POST to the /Chirps endpoint (chirps.store route) and clear the form on success.
         post(route('chirps.store'), { onSuccess: () => reset() });
     };
  
