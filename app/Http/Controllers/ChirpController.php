@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Chirp;
-use DateTime;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Inertia\Inertia;
+use Inertia\Response;
 
 class ChirpController extends Controller
 {
@@ -14,7 +14,9 @@ class ChirpController extends Controller
      */
     public function index(): Response
     {
-        return response('Hello, world! ' . date("Y-m-d h:i:sa"));
+        return Inertia::render('Chirps/Index', [
+            // 
+        ]);
     }
 
     /**
