@@ -34,6 +34,18 @@ Connecting your SQL Management Software using localhost with the default usernam
 
 You may view all of the routes for your application by running the `./vendor/bin/sail artisan route:list` command.
 
+## Execute code
+
+You can execute code and methods to test them and see the results easily with Tinker:
+
+`./vendor/bin/sail artisan tinker`
+
+This will open a CLI to run your commands. For example:
+
+`App\Models\Chirp::all();`
+
+This command will run the `all` method from the `Chirp` class, which lists all the Chirps from the database.
+
 ## Source
 
 The source of the instructions for starting the project is:
