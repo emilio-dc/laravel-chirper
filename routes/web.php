@@ -31,7 +31,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::resource('chirps', ChirpController::class)
-    ->only(['index', 'store']) // The first one is GET, the second one is POST
+    ->only(['index', 'store', 'update']) // The first one is GET, the second one is POST, the third one is PUT/PATCH
     ->middleware(['auth', 'verified']); // You must be logged in and your email must be verified (if enabled)
 
 Route::middleware('auth')->group(function () {
