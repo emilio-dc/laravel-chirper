@@ -46,6 +46,14 @@ This will open a CLI to run your commands. For example:
 
 This command will run the `all` method from the `Chirp` class, which lists all the Chirps from the database.
 
+## Emails
+
+If you are developing via Docker, you can see all the emails sent from the app by using Mailpit:
+
+http://localhost:8025/
+
+This email testing tool catches any emails coming from your application.
+
 ## Source
 
 The source of the instructions for starting the project is:
