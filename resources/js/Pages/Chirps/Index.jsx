@@ -5,14 +5,16 @@ import InputError from '@/Components/InputError';
 import PrimaryButton from '@/Components/PrimaryButton';
 import { useForm, Head } from '@inertiajs/react';
  
+// Index page for the Chirps controller (chirps.index route).
 export default function Index({ auth, chirps }) {
     const { data, setData, post, processing, reset, errors } = useForm({
         message: '',
     });
  
+    // When submitting the form for creating a new Chirp:
     const submit = (e) => {
         e.preventDefault();
-        // Sends the form using POST to the /Chirps endpoint (chirps.store route) and clear the form on success.
+        // Sends the form using POST to the /Chirps endpoint (chirps.store route) for creating a new Chirp and clear the form on success.
         post(route('chirps.store'), { onSuccess: () => reset() });
     };
  

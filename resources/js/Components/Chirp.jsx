@@ -8,6 +8,7 @@ import { useForm, usePage } from '@inertiajs/react';
 
 dayjs.extend(relativeTime);
 
+// Component for displaying a single Chirp.
 export default function Chirp({ chirp }) {
     const { auth } = usePage().props;
 
@@ -17,10 +18,12 @@ export default function Chirp({ chirp }) {
         message: chirp.message
     });
 
+    // When submitting the edition form:
     const submit = (e) => {
         e.preventDefault();
+        // Send a request to the update route of this Chirp (by ID), with the new message (from the form).
         patch(route('chirps.update', chirp.id), {
-            onSuccess: () => setEditing(false)
+            onSuccess: () => setEditing(false) // If it was updated without errors, set the editing status back to "false".
         });
     };
 
@@ -66,6 +69,9 @@ export default function Chirp({ chirp }) {
                                     onClick={() => setEditing(true)}>
                                     Edit
                                 </button>
+                                <Dropdown.Link as="button" href={route('chirps.destroy', chirp.id)} method="delete">
+                                    Delete
+                                </Dropdown.Link>
                             </Dropdown.Content>
                         </Dropdown>
                     }
